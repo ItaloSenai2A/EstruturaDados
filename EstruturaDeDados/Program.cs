@@ -95,6 +95,82 @@
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
-    }
 
+        Console.WriteLine();
+        Console.WriteLine("================");
+        Console.WriteLine();
+
+        //TRABALHANDO COM FILA //
+
+        //Criar uma Fila (Queue)
+        Queue<string> filaBanco = new Queue<string>();
+
+        //Adicionar Elementos em 
+        filaBanco.Enqueue("André");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("Bia");
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        //Retirar o primeiro elemento de uma fila 
+        filaBanco.Dequeue();
+
+        Console.WriteLine();
+        Console.WriteLine("================");
+        Console.WriteLine();
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        //Verificar se existe um elemento na fila
+
+        bool achou = filaBanco.Contains("Bia");
+
+        if (achou)
+        {
+            Console.WriteLine("A pessoa está na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não está na fila");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("================");
+        Console.WriteLine();
+
+        //TRABALHANDO COM PILHA 
+
+        //Criando uma pilha 
+        Stack<string> livros = new Stack<string>();
+
+        //Adicionar elementos em uma pilha
+        livros.Push("Chapeuzinho Vermelho");
+        livros.Push("Branca de neve e os sete anões");
+        livros.Push("Princesa e o Sapo");
+
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();
+        Console.WriteLine("================");
+        Console.WriteLine();
+
+        //Remove o primeiro elemento da Pilha
+        livros.Pop();
+        foreach (var livro in livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();
+        Console.WriteLine("================");
+        Console.WriteLine();
+
+    }
 }
